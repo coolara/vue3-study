@@ -1,0 +1,21 @@
+<div id="app">
+  <!-- 插值、特性绑定 -->
+  <h1 :title="title">{{title}}</h1>
+  <!-- html内容 -->
+  <p v-html="rawHtml"></p>
+</div>
+
+<script src="https://unpkg.com/vue@3.2"></script>
+
+
+<script>
+  // 创建一个应用程序实例
+   Vue.createApp({
+    data(){
+      return {
+        title: 'vue3.2',
+        rawHtml: '<span style="color:red">vue3真棒！</span>'
+      }
+    }
+  }).mount('#app')
+</script>
